@@ -56,7 +56,7 @@ public class login_view extends JFrame {
 	 * @throws IOException 
 	 */
 	public login_view() throws IOException {
-		BufferedImage image = ImageIO.read(new File("C:\\Users\\Admin\\Pictures\\background.jpg"));
+		BufferedImage image = ImageIO.read(new File("src/media/background.jpg"));
 		setVisible(true);
 
 		setTitle("Login");
