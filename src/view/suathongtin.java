@@ -152,14 +152,14 @@ public class suathongtin extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					try {
-					    String url = "jdbc:sqlserver://localhost:1433;databaseName=ManageDocument";// your db name
-					    String user="admin"; // your db username
-					    String password="123"; // your db password
+					    String url = "jdbc:mysql://localhost:3306/document";// your db name
+					    String user="root"; // your db username
+					    String password="root"; // your db password
 					    Connection conn;
-						Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+						Class.forName("com.mysql.jdbc.Driver");
 						conn = DriverManager.getConnection(url, user, password);
 						String masach = txtIdBrepair.getText();
-						String sql = "select * from BOOK_INFO where IdB='"+masach+"'";
+						String sql = "select * from book_info where IdB='"+masach+"'";
 						var thongtin = conn.prepareStatement(sql);
 						var result = thongtin.executeQuery();
 
@@ -203,7 +203,7 @@ public class suathongtin extends JFrame {
 					String idb = txtIdBrepair.getText();
 					String type  = txtType.getText();
 					
-					var sql = "update BOOK_INFO set DocumentName='"+documentname+"',Author='"+auhtor+"',Year="+year+",Amount="+amount+",Type='"
+					var sql = "update book_info set DocumentName='"+documentname+"',Author='"+auhtor+"',Year="+year+",Amount="+amount+",Type='"
 							+type+"'where IdB='"+idb+"'";
 					var suatt = conn.prepareStatement(sql);
 					suatt.executeUpdate();		

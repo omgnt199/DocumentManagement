@@ -96,7 +96,7 @@ public class phieumuonlist_view extends JFrame {
 		 	}
 		 });
 		
-		 comboBox = new JComboBox();
+		comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"5", "10", "15", "20"}));
 		
 		prevButton = new JButton("Prev");

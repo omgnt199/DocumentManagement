@@ -79,7 +79,7 @@ public class sach extends JFrame {
 	public void bookinLib() {
 		try
 		{
-			var sql = "select * from BOOK_INFO";
+			var sql = "select * from book_info";
 			var show = con.conn.prepareStatement(sql);
 			var result = show.executeQuery();
 			while(result.next())

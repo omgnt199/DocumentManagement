@@ -11,11 +11,11 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 	
 
 	@Override
-	public void themsach() throws SQLException,NullPointerException {
+	public void themsach() throws SQLException,NullPointerException { 
 
 		String s1=String.valueOf(book.Year);
 		String s2=String.valueOf(book.Amount);
-		var them = "insert into BOOK_INFO "+"VALUES('"+book.idB+"','"+book.DocumentName+"','"+book.Author+"','"+s1+"','"+s2+"','"+book.type+"')";
+		var them = "insert into book_info "+"VALUES('"+book.idB+"','"+book.DocumentName+"','"+book.Author+"','"+s1+"','"+s2+"','"+book.type+"')";
 		var insert = conn.prepareStatement(them);
 		insert.executeUpdate();
 		
@@ -24,7 +24,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 	@Override
 	public void suathongtin(String ms) throws SQLException {
 
-		var bookinfo = "select * from BOOK_INFO where IdB = '" + ms +"'";
+		var bookinfo = "select * from book_info where IdB = '" + ms +"'";
 
 		var sua = conn.prepareStatement(bookinfo);
 		if(sua.getUpdateCount()==-1)
@@ -52,7 +52,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 	        String s1 = String.valueOf(b.Year);
 	        String s2 = String.valueOf(b.Amount);
 	       
-			var thongtin = "update BOOK_INFO set DocumentName='"+b.DocumentName+"',Author='"+b.Author+"',Year="+s1+",Amount="
+			var thongtin = "update book_info set DocumentName='"+b.DocumentName+"',Author='"+b.Author+"',Year="+s1+",Amount="
 					+s2+",IdB='"+b.idB+"',Type='"+b.type+"' where Idb ='"+ms+"'";
 			var suatt = conn.prepareStatement(thongtin);
 			suatt.executeUpdate();		
@@ -62,7 +62,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 
 	@Override
 	public void xoa(String ms) throws SQLException {
-		var xoatt = "DELETE FROM BOOK_INFO WHERE Idb ='" + ms + "'";
+		var xoatt = "DELETE FROM book_info WHERE Idb ='" + ms + "'";
 		var xoatt_th = conn.prepareStatement(xoatt);
 		xoatt_th.executeUpdate();
 		
@@ -89,7 +89,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 					String tensach;
 					System.out.println("Nhap ten sach muon tim: ");
 					tensach = sc.nextLine();
-					timkiemtt="select * from BOOK_INFO where DocumentName ='"+tensach+"'";
+					timkiemtt="select * from book_info where DocumentName ='"+tensach+"'";
 					timkiemtt_th = conn.prepareStatement(timkiemtt);
 					resultset = timkiemtt_th.executeQuery();
 					showResutl(resultset);
@@ -98,7 +98,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 					String tentacgia;
 					System.out.println("Nhap ten tac gia muon tim: ");
 					tentacgia = sc.nextLine();
-					timkiemtt="select * from BOOK_INFO where Author ='"+tentacgia+"'";
+					timkiemtt="select * from book_info where Author ='"+tentacgia+"'";
 					timkiemtt_th = conn.prepareStatement(timkiemtt);
 					resultset = timkiemtt_th.executeQuery();
 					showResutl(resultset);
@@ -108,7 +108,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 					System.out.println("Nhap nam xuat ban muon tim: ");
 					year = sc.nextInt();
 					String y = String.valueOf(year);
-					timkiemtt = "select * from BOOK_INFO where Year = "+y;
+					timkiemtt = "select * from book_info where Year = "+y;
 					timkiemtt_th = conn.prepareStatement(timkiemtt);
 					resultset = timkiemtt_th.executeQuery();
 					showResutl(resultset);
@@ -117,7 +117,7 @@ public class MENU extends ConnectSQL implements ManageInfomation {
 					String theloai;
 					System.out.println("Nhap the loai muon tim: ");
 					theloai = sc.nextLine();
-					timkiemtt = "select * from BOOK_INFO where Type='"+theloai+"'";
+					timkiemtt = "select * from book_info where Type='"+theloai+"'";
 					timkiemtt_th = conn.prepareStatement(timkiemtt);
 					resultset = timkiemtt_th.executeQuery();
 					showResutl(resultset);

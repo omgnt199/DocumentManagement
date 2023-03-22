@@ -166,7 +166,7 @@ public class themsach_view extends JFrame {
 		comboBox = new JComboBox();
 
 		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"TIEN HIEP", "KIEM HIEP", "NGON TINH", "KINH DOANH", "KHOA HOC", "TIEU THUYET", "NGON TINH"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"TIEN HIEP", "KIEM HIEP", "NGON TINH", "KINH DOANH", "KHOA HOC", "TIEU THUYET", "NGON TINH","LICH SU"}));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
