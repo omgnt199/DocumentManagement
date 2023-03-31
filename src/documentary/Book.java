@@ -2,20 +2,20 @@ package documentary;
 
 
 public class Book extends Document {
-	 String idB;
+	 int idB;
 	 String type;
 	 
 	public Book(){
 	
 	}
 	
-	public Book(String documentname, String author, int year, int amount, String idB, String type){
+	public Book(String documentname, String author, int year, int amount, int idB, String type){
 		super(documentname,author,year,amount);
 		this.idB = idB;
 		this.type = type;
 	}
 	
-	public void setinfo(String documentname, String author, int year, int amount, String idb, String type) {
+	public void setinfo(String documentname, String author, int year, int amount, int idb, String type) {
 		this.DocumentName = documentname;
 		this.Author = author;
 		this.Year = year;
@@ -24,14 +24,14 @@ public class Book extends Document {
 		this.type = type;
 		
 	}
-	public void setIdB(String idB) {
+	public void setIdB(int idB) {
 		this.idB = idB;
 	}
 	public void setType(String type) {
 		this.type = type;
 	}
 	
-	public String getIdB() {
+	public int getIdB() {
 		return idB;
 	}
 	

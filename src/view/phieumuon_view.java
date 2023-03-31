@@ -231,7 +231,7 @@ public class phieumuon_view extends JFrame {
 				}
 				tacgiatxt.setText(b.getAuthor());
 				tensachtxt.setText(b.getDocumentName());
-				if(b.getDocumentName()!=null && b.getIdB()!=null)
+				if(b.getDocumentName()!=null)
 				{
 				model.addRow(new Object[] {
 						b.getIdB(),b.getDocumentName()

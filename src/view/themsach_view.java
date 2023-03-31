@@ -125,7 +125,7 @@ public class themsach_view extends JFrame {
 					String author =txtAuthor.getText();
 					int year = Integer.parseInt(txtYear.getText());
 					int amount = Integer.parseInt(txtAmount.getText());
-					String idb = txtIdB.getText();
+					int idb = Integer.parseInt(txtIdB.getText());
 					String type = (String) comboBox.getItemAt(comboBox.getSelectedIndex());
 					menu.book.setinfo(documentname, author, year, amount, idb, type);
 					menu.themsach();

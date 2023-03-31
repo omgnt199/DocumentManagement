@@ -312,7 +312,7 @@ public class ManageReader extends JFrame {
 				r.setEmail(emailtxt.getText());
 
 
-					var sql = "insert into READER_INFO VALUES('"+r.getpID()+"','"+r.getFullname()+"','"+r.getAddress()+"','"+r.getSex()+"','"+r.getIdReader()+"','"+
+					var sql = "insert into reader_info VALUES('"+r.getpID()+"','"+r.getFullname()+"','"+r.getAddress()+"','"+r.getSex()+"','"+r.getIdReader()+"','"+
 								r.getTypeReader()+"','"+r.getPhonenumber()+"','"+r.getEmail()+"','"+r.getAge()+"')";
 					var statement = con.conn.prepareStatement(sql);
 					statement.executeUpdate();

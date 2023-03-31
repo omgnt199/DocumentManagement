@@ -89,7 +89,7 @@ public class sach extends JFrame {
 				b.setAuthor(result.getString("Author"));
 				b.setYear(result.getInt("Year"));
 				b.setAmount(result.getInt("Amount"));
-				b.setIdB(result.getString("IdB"));
+				b.setIdB(result.getInt("IdB"));
 				b.setType(result.getString("Type"));
 				list.add(b);
 			}
