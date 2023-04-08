@@ -40,6 +40,7 @@ public class themsach_view extends JFrame {
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
 	private JComboBox comboBox;
+	private JTextArea txtRp;
 
 
 	/**
